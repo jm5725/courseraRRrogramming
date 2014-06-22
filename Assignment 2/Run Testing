@@ -1,0 +1,23 @@
+## Testing Log File
+
+Run:
+
+x = rbind(c(1,2),c(3,4))
+> matrix = makeCacheMatrix(x)
+> matrix$get()
+     [,1] [,2]
+[1,]    1    2
+[2,]    3    4
+
+## Don't have in the cache
+> cacheSolve(matrix)
+     [,1] [,2]
+[1,] -2.0  1.0
+[2,]  1.5 -0.5
+
+## The second run, read from cache
+> cacheSolve(matrix)
+getting cached data!
+     [,1] [,2]
+[1,] -2.0  1.0
+[2,]  1.5 -0.5
